@@ -4,41 +4,48 @@ Completed milestones for the Kosovo Supermarket Price Tracker.
 
 ## Completed
 
-### Step 1 — Project README
+### Steps 1–5 — Foundation
 
 - Created `README.md`.
-- Documented the project purpose, goals, planned architecture, development principles, and definition of done.
+- Created `TODO.md` and `FINISHED.md`.
+- Defined repository structure and responsibilities.
+- Defined supermarket/source configuration format.
+- Selected five initial Kosovo supermarket targets and documented source candidates.
 
-### Step 2 — Development roadmap
+### Step 6 — Common product and price data model
 
-- Created `TODO.md`.
-- Added the full implementation roadmap from foundation through production verification.
+- Created `docs/PRODUCT_PRICE_MODEL.md`.
+- Defined canonical products, price observations, promotions, quantities, provenance, and unit-price rules.
+- Chose decimal monetary representation and conservative product matching rules.
 
-### Step 3 — Repository structure
+### Step 7 — Public-source collection strategy
 
-- Defined the repository layout in `docs/PROJECT_STRUCTURE.md`.
-- Added placeholder files so the initial directory structure exists in Git.
+- Created `docs/SOURCE_COLLECTION.md` and `docs/COLLECTION_POLICY.md`.
+- Defined source priority, provenance, rate limiting, failure handling, and safe public-access requirements.
+- Facebook is supported only where permitted public access is available; no authentication/CAPTCHA/access-control bypass is planned.
 
-### Step 4 — Supermarket configuration format
+### Step 8 — Generic collection and extraction foundation
 
-- Defined the supermarket configuration contract in `config/supermarkets.example.json`.
-- Configuration keeps supermarket-specific source URLs and collector settings separate from application code.
+- Added `collectors/collector_contract.py` with a reusable source-record contract.
+- Added an initial deterministic EUR price parser at `parser/price_parser.py`.
+- Added parser tests.
 
-### Step 5 — Initial supermarket sources
+### Step 9 — Normalization and storage foundation
 
-- Selected five initial Kosovo supermarket targets for the first research/collection phase:
-  - Viva Fresh Store
-  - Kipper Market Kosova
-  - Meridian Express
-  - ETC / Elkos Trading Center
-  - Interex
-- Recorded their public source URLs and source notes in `config/supermarkets.example.json`.
-- Initial implementation will prefer official websites/online offer material where available and treat Facebook pages as public source candidates rather than assuming unrestricted scraping access.
+- Added conservative product-name and quantity/unit normalization helpers.
+- Added a PostgreSQL-compatible initial schema in `database/schema.sql` for supermarkets, products, price observations, and collection runs.
+- Added normalization tests.
+
+### Step 10 — Comparison foundation
+
+- Added unit-price, price-difference, and percentage-difference calculation helpers.
+- Added comparison tests.
+- Defined the next implementation target as the first real permitted supermarket collector.
 
 ## Verification
 
-Each milestone is only marked finished after the corresponding repository files are created and verified.
+Each milestone is marked finished only after the corresponding repository changes are created successfully through GitHub.
 
 ## Current state
 
-The project is ready for the next task: define the common product and price data model.
+The project has its architecture, configuration, data contract, collection policy, parsing/normalization foundation, database schema, and comparison calculations. The next task is to implement the **first real supermarket collector** against a permitted public source and test the complete source-to-price pipeline.
