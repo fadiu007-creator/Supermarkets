@@ -3,7 +3,6 @@
 Active development roadmap for the Kosovo Supermarket Price Tracker.
 
 ## Phase 1 — Foundation
-
 - [x] Create project README
 - [x] Create project status/completion log
 - [x] Define repository structure
@@ -12,17 +11,17 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 - [x] Define common product/price data model
 
 ## Phase 2 — Data collection
-
 - [x] Research permitted public data-source strategy
-- [x] Implement a generic collector interface
-- [ ] Implement first real supermarket collector
-- [ ] Implement additional supermarket collectors one at a time
-- [ ] Add request throttling, retries, timeouts, and error handling
+- [x] Implement a generic public website collector
+- [x] Implement first real supermarket collector foundation (Viva Fresh website runner)
+- [x] Add request timeout/error propagation
 - [x] Define collection timestamp/source provenance fields
 - [x] Define separation of raw source data and normalized data
+- [ ] Implement additional supermarket collectors one at a time
+- [ ] Add production-grade throttling/retries
+- [ ] Verify live source extraction and save real observations
 
 ## Phase 3 — Product and price extraction
-
 - [x] Implement initial EUR price extraction helper
 - [x] Add parser tests
 - [x] Define product-name normalization
@@ -33,7 +32,6 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 - [ ] Match equivalent products across supermarkets
 
 ## Phase 4 — Storage and history
-
 - [x] Choose PostgreSQL-compatible relational model
 - [x] Create schema for supermarkets
 - [x] Create schema for products
@@ -44,7 +42,6 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 - [ ] Add database migrations
 
 ## Phase 5 — Comparison engine
-
 - [x] Add unit-price calculation helper
 - [x] Add price difference/percentage helpers
 - [x] Add comparison tests
@@ -53,18 +50,17 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 - [ ] Handle missing products safely in production flow
 
 ## Phase 6 — API
-
-- [ ] Create API application
-- [ ] Endpoint for supermarkets
-- [ ] Endpoint for products
-- [ ] Endpoint for current prices
-- [ ] Endpoint for price comparisons
-- [ ] Endpoint for historical prices
-- [ ] Add validation and error responses
-- [ ] Add API tests
+- [x] Create API application foundation
+- [x] Add health endpoint
+- [x] Add initial supermarkets endpoint
+- [x] Add initial comparisons endpoint
+- [x] Add API smoke tests
+- [ ] Connect endpoints to database
+- [ ] Add real product/price endpoints
+- [ ] Add validation and production error responses
 
 ## Phase 7 — Frontend
-
+- [x] Define frontend/API contract
 - [ ] Create web application
 - [ ] Supermarket selector
 - [ ] Product search
@@ -76,7 +72,6 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 - [ ] Responsive mobile UI
 
 ## Phase 8 — Automation and deployment
-
 - [ ] Add scheduled collection jobs
 - [ ] Add logging and monitoring
 - [ ] Add production environment configuration
@@ -86,7 +81,6 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 - [ ] Verify production collection and comparison flow
 
 ## Phase 9 — Quality and completion
-
 - [ ] End-to-end test from source collection to frontend comparison
 - [ ] Test scraper failures and unavailable sources
 - [ ] Review platform terms and applicable requirements for every source
@@ -97,4 +91,4 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 
 ## Current task
 
-**Step 11: Implement the first real supermarket collector against a permitted public source.**
+**Step 15: Connect the collector/parser to real permitted source data and persist observations.**
