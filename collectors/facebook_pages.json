@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {"supermarket_id":"kipper","name":"Kipper Market Kosova","url":"https://www.facebook.com/kipperkosova","enabled":true},
+    {"supermarket_id":"viva-fresh","name":"Viva Fresh Store","url":"https://www.facebook.com/vivafreshstore","enabled":true},
+    {"supermarket_id":"meridian","name":"Meridian Express","url":"https://www.facebook.com/meridianexpresskosova","enabled":true},
+    {"supermarket_id":"etc","name":"ETC / Elkos Trading Center","url":"https://www.facebook.com/etcks","enabled":true}
+  ]
+}
