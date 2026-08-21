@@ -9,18 +9,8 @@
       "enabled": true,
       "collector": "generic_public_source",
       "sources": [
-        {
-          "type": "website",
-          "url": "https://vivafresh-rks.com/",
-          "priority": 1,
-          "notes": "Official website. Official online store is also available and should be evaluated before Facebook collection."
-        },
-        {
-          "type": "facebook",
-          "url": "https://www.facebook.com/vivafresh.rks/",
-          "priority": 2,
-          "notes": "Public Facebook page candidate for public offers/posts. Do not bypass login, access controls, CAPTCHA, or platform restrictions."
-        }
+        {"type": "website", "url": "https://vivafresh-rks.com/", "priority": 1, "notes": "Official website."},
+        {"type": "facebook", "url": "https://www.facebook.com/vivafresh.rks/", "priority": 2, "notes": "Public Facebook page candidate; do not bypass access controls."}
       ]
     },
     {
@@ -30,12 +20,7 @@
       "enabled": true,
       "collector": "generic_public_source",
       "sources": [
-        {
-          "type": "facebook",
-          "url": "https://www.facebook.com/kipperkosova/",
-          "priority": 1,
-          "notes": "Public Facebook page candidate. Source access must remain within permitted public access."
-        }
+        {"type": "facebook", "url": "https://www.facebook.com/kipperkosova/", "priority": 1, "notes": "Public Facebook page candidate; access must remain permitted public access."}
       ]
     },
     {
@@ -45,18 +30,8 @@
       "enabled": true,
       "collector": "generic_public_source",
       "sources": [
-        {
-          "type": "website",
-          "url": "https://meridianexpress.com/",
-          "priority": 1,
-          "notes": "Official website includes offer/leaflet functionality."
-        },
-        {
-          "type": "facebook",
-          "url": "https://www.facebook.com/RrjetiMeridianExpress/",
-          "priority": 2,
-          "notes": "Official Facebook page candidate for public offers/posts."
-        }
+        {"type": "website", "url": "https://meridianexpress.com/", "priority": 1, "notes": "Official website with offer/leaflet functionality."},
+        {"type": "facebook", "url": "https://www.facebook.com/RrjetiMeridianExpress/", "priority": 2, "notes": "Public Facebook page candidate."}
       ]
     },
     {
@@ -66,18 +41,8 @@
       "enabled": true,
       "collector": "generic_public_source",
       "sources": [
-        {
-          "type": "website",
-          "url": "https://www.etc-ks.com/",
-          "priority": 1,
-          "notes": "Official website exposes current products and promotional prices and links to flyers."
-        },
-        {
-          "type": "facebook",
-          "url": "https://www.facebook.com/etcks/",
-          "priority": 2,
-          "notes": "Official Facebook page candidate for public offers/posts."
-        }
+        {"type": "website", "url": "https://www.etc-ks.com/", "priority": 1, "notes": "Official website exposes products and promotional prices and links to flyers."},
+        {"type": "facebook", "url": "https://www.facebook.com/etcks/", "priority": 2, "notes": "Official Facebook page candidate."}
       ]
     },
     {
@@ -86,14 +51,8 @@
       "country": "XK",
       "enabled": false,
       "collector": "generic_public_source",
-      "sources": [
-        {
-          "type": "facebook",
-          "url": "https://www.facebook.com/",
-          "priority": 1,
-          "notes": "Exact current official Interex page URL still needs verification before enabling collection."
-        }
-      ]
+      "sources": [],
+      "notes": "Initial target, but the exact current official public source URL still needs verification before collection is enabled."
     }
   ]
 }
