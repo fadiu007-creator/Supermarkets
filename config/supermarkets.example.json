@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "currency_default": "EUR",
+  "supermarkets": [
+    {
+      "id": "viva-fresh",
+      "name": "Viva Fresh Store",
+      "country": "XK",
+      "enabled": true,
+      "collector": "generic_public_source",
+      "sources": [
+        {
+          "type": "website",
+          "url": "https://vivafresh-rks.com/",
+          "priority": 1,
+          "notes": "Official website. Official online store is also available and should be evaluated before Facebook collection."
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/vivafresh.rks/",
+          "priority": 2,
+          "notes": "Public Facebook page candidate for public offers/posts. Do not bypass login, access controls, CAPTCHA, or platform restrictions."
+        }
+      ]
+    },
+    {
+      "id": "kipper",
+      "name": "Kipper Market Kosova",
+      "country": "XK",
+      "enabled": true,
+      "collector": "generic_public_source",
+      "sources": [
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/kipperkosova/",
+          "priority": 1,
+          "notes": "Public Facebook page candidate. Source access must remain within permitted public access."
+        }
+      ]
+    },
+    {
+      "id": "meridian-express",
+      "name": "Meridian Express",
+      "country": "XK",
+      "enabled": true,
+      "collector": "generic_public_source",
+      "sources": [
+        {
+          "type": "website",
+          "url": "https://meridianexpress.com/",
+          "priority": 1,
+          "notes": "Official website includes offer/leaflet functionality."
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/RrjetiMeridianExpress/",
+          "priority": 2,
+          "notes": "Official Facebook page candidate for public offers/posts."
+        }
+      ]
+    },
+    {
+      "id": "etc",
+      "name": "ETC / Elkos Trading Center",
+      "country": "XK",
+      "enabled": true,
+      "collector": "generic_public_source",
+      "sources": [
+        {
+          "type": "website",
+          "url": "https://www.etc-ks.com/",
+          "priority": 1,
+          "notes": "Official website exposes current products and promotional prices and links to flyers."
+        },
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/etcks/",
+          "priority": 2,
+          "notes": "Official Facebook page candidate for public offers/posts."
+        }
+      ]
+    },
+    {
+      "id": "interex",
+      "name": "Interex",
+      "country": "XK",
+      "enabled": false,
+      "collector": "generic_public_source",
+      "sources": [
+        {
+          "type": "facebook",
+          "url": "https://www.facebook.com/",
+          "priority": 1,
+          "notes": "Exact current official Interex page URL still needs verification before enabling collection."
+        }
+      ]
+    }
+  ]
+}
