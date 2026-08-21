@@ -8,48 +8,49 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 - [x] Create project status/completion log
 - [x] Define repository structure
 - [x] Define supported supermarket configuration format
-- [x] Choose initial supermarkets and public source URLs
-- [ ] Define common product/price data model
+- [x] Choose initial supermarket targets and public source candidates
+- [x] Define common product/price data model
 
 ## Phase 2 — Data collection
 
-- [ ] Research permitted public data sources for each supermarket
-- [ ] Implement a generic collector interface
-- [ ] Implement first supermarket collector
+- [x] Research permitted public data-source strategy
+- [x] Implement a generic collector interface
+- [ ] Implement first real supermarket collector
 - [ ] Implement additional supermarket collectors one at a time
 - [ ] Add request throttling, retries, timeouts, and error handling
-- [ ] Store collection timestamp and source URL for every observation
-- [ ] Keep raw collected data separate from normalized data
+- [x] Define collection timestamp/source provenance fields
+- [x] Define separation of raw source data and normalized data
 
 ## Phase 3 — Product and price extraction
 
-- [ ] Extract product names
-- [ ] Extract prices and currencies
-- [ ] Extract units/weights/quantities where available
-- [ ] Extract offer dates where available
-- [ ] Handle discounted/promotional prices explicitly
-- [ ] Build parser test fixtures from permitted public examples
-- [ ] Normalize product names, units, and quantities
+- [x] Implement initial EUR price extraction helper
+- [x] Add parser tests
+- [x] Define product-name normalization
+- [x] Define quantity/unit normalization
+- [ ] Extract products from a real permitted supermarket source
+- [ ] Extract offer dates from real source material
+- [ ] Handle discounted/promotional prices from real source material
 - [ ] Match equivalent products across supermarkets
 
 ## Phase 4 — Storage and history
 
-- [ ] Choose database
-- [ ] Create schema for supermarkets
-- [ ] Create schema for products
-- [ ] Create schema for price observations
-- [ ] Create schema for collection runs/errors
+- [x] Choose PostgreSQL-compatible relational model
+- [x] Create schema for supermarkets
+- [x] Create schema for products
+- [x] Create schema for price observations
+- [x] Create schema for collection runs/errors
+- [ ] Implement database persistence
 - [ ] Store historical price snapshots
 - [ ] Add database migrations
 
 ## Phase 5 — Comparison engine
 
-- [ ] Compare equivalent products across supermarkets
-- [ ] Calculate lowest available price
-- [ ] Calculate price differences and percentages
-- [ ] Support unit-price comparisons where quantities differ
-- [ ] Handle missing products safely
-- [ ] Add comparison tests
+- [x] Add unit-price calculation helper
+- [x] Add price difference/percentage helpers
+- [x] Add comparison tests
+- [ ] Compare real equivalent products across supermarkets
+- [ ] Calculate lowest available real price
+- [ ] Handle missing products safely in production flow
 
 ## Phase 6 — API
 
@@ -92,9 +93,8 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 - [ ] Document setup and maintenance
 - [ ] Document how to add a new supermarket
 - [ ] Document how to resume development from TODO.md
-- [ ] Move completed work into FINISHED.md
 - [ ] Final production verification
 
 ## Current task
 
-**Step 6: Define the common product and price data model.**
+**Step 11: Implement the first real supermarket collector against a permitted public source.**
