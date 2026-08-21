@@ -13,40 +13,40 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 ## Phase 2 — Data collection
 - [x] Research permitted public data-source strategy
 - [x] Implement a generic public website collector
-- [x] Implement first real supermarket collector foundation (Viva Fresh website runner)
+- [x] Implement Viva Fresh public online collector foundation
+- [x] Add shared source-record model
+- [x] Add Facebook public-source adapter contract
 - [x] Add request timeout/error propagation
-- [x] Define collection timestamp/source provenance fields
-- [x] Define separation of raw source data and normalized data
+- [ ] Verify live source extraction and save real observations
 - [ ] Implement additional supermarket collectors one at a time
 - [ ] Add production-grade throttling/retries
-- [ ] Verify live source extraction and save real observations
 
 ## Phase 3 — Product and price extraction
-- [x] Implement initial EUR price extraction helper
+- [x] Implement EUR price extraction helper
+- [x] Add product-price candidate extraction
 - [x] Add parser tests
 - [x] Define product-name normalization
-- [x] Define quantity/unit normalization
-- [ ] Extract products from a real permitted supermarket source
+- [x] Define conservative product matching
+- [ ] Extract products from real permitted supermarket HTML/API data
 - [ ] Extract offer dates from real source material
 - [ ] Handle discounted/promotional prices from real source material
-- [ ] Match equivalent products across supermarkets
+- [ ] Match equivalent real products across supermarkets
 
 ## Phase 4 — Storage and history
-- [x] Choose PostgreSQL-compatible relational model
-- [x] Create schema for supermarkets
-- [x] Create schema for products
-- [x] Create schema for price observations
-- [x] Create schema for collection runs/errors
-- [ ] Implement database persistence
+- [x] Define PostgreSQL-compatible schema
+- [x] Implement local SQLite persistence for development
+- [x] Create tables for supermarkets/products/observations/runs
+- [ ] Connect collector output to persistence end-to-end
 - [ ] Store historical price snapshots
-- [ ] Add database migrations
+- [ ] Add production database migrations
 
 ## Phase 5 — Comparison engine
 - [x] Add unit-price calculation helper
 - [x] Add price difference/percentage helpers
-- [x] Add comparison tests
+- [x] Add cross-supermarket matching helper
+- [x] Add comparison service
 - [ ] Compare real equivalent products across supermarkets
-- [ ] Calculate lowest available real price
+- [ ] Calculate lowest available real price from database
 - [ ] Handle missing products safely in production flow
 
 ## Phase 6 — API
@@ -60,23 +60,23 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 - [ ] Add validation and production error responses
 
 ## Phase 7 — Frontend
-- [x] Define frontend/API contract
-- [ ] Create web application
-- [ ] Supermarket selector
+- [x] Create Next.js frontend foundation
+- [x] Add initial comparison UI
+- [x] Add supermarket search/filter UI
+- [x] Add lowest-price indication to comparison prototype
+- [ ] Replace demo data with API data
 - [ ] Product search
-- [ ] Price comparison table
-- [ ] Lowest-price highlighting
-- [ ] Product/unit information
+- [ ] Supermarket selector
 - [ ] Price history view
 - [ ] Source links and collection timestamps
-- [ ] Responsive mobile UI
+- [ ] Responsive production UI
 
 ## Phase 8 — Automation and deployment
 - [ ] Add scheduled collection jobs
 - [ ] Add logging and monitoring
 - [ ] Add production environment configuration
 - [ ] Keep secrets out of Git
-- [ ] Deploy backend/API
+- [ ] Deploy API
 - [ ] Deploy frontend
 - [ ] Verify production collection and comparison flow
 
@@ -91,4 +91,4 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 
 ## Current task
 
-**Step 15: Connect the collector/parser to real permitted source data and persist observations.**
+**Step 21: Connect a real permitted source to persistence, verify extracted observations, then connect the API/frontend to real database data.**
