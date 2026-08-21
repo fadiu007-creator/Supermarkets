@@ -5,47 +5,30 @@ Completed milestones for the Kosovo Supermarket Price Tracker.
 ## Completed
 
 ### Steps 1–5 — Foundation
+- Created README, TODO, and FINISHED tracking files.
+- Defined repository structure and supermarket/source configuration.
+- Selected initial Kosovo supermarket targets and documented source candidates.
 
-- Created `README.md`.
-- Created `TODO.md` and `FINISHED.md`.
-- Defined repository structure and responsibilities.
-- Defined supermarket/source configuration format.
-- Selected five initial Kosovo supermarket targets and documented source candidates.
+### Steps 6–10 — Data architecture
+- Defined canonical product and price observation model.
+- Defined public-source collection policy and provenance requirements.
+- Added initial EUR price parsing and normalization tests.
+- Added PostgreSQL-compatible schema for supermarkets, products, observations, and collection runs.
+- Added unit-price and price-difference calculations and tests.
 
-### Step 6 — Common product and price data model
-
-- Created `docs/PRODUCT_PRICE_MODEL.md`.
-- Defined canonical products, price observations, promotions, quantities, provenance, and unit-price rules.
-- Chose decimal monetary representation and conservative product matching rules.
-
-### Step 7 — Public-source collection strategy
-
-- Created `docs/SOURCE_COLLECTION.md` and `docs/COLLECTION_POLICY.md`.
-- Defined source priority, provenance, rate limiting, failure handling, and safe public-access requirements.
-- Facebook is supported only where permitted public access is available; no authentication/CAPTCHA/access-control bypass is planned.
-
-### Step 8 — Generic collection and extraction foundation
-
-- Added `collectors/collector_contract.py` with a reusable source-record contract.
-- Added an initial deterministic EUR price parser at `parser/price_parser.py`.
-- Added parser tests.
-
-### Step 9 — Normalization and storage foundation
-
-- Added conservative product-name and quantity/unit normalization helpers.
-- Added a PostgreSQL-compatible initial schema in `database/schema.sql` for supermarkets, products, price observations, and collection runs.
-- Added normalization tests.
-
-### Step 10 — Comparison foundation
-
-- Added unit-price, price-difference, and percentage-difference calculation helpers.
-- Added comparison tests.
-- Defined the next implementation target as the first real permitted supermarket collector.
-
-## Verification
-
-Each milestone is marked finished only after the corresponding repository changes are created successfully through GitHub.
+### Steps 11–14 — Working application foundations
+- Added a permitted public HTTP collector and Viva Fresh website runner.
+- Added shared source-record model.
+- Added local SQLite persistence implementation for development.
+- Added a Facebook public-source adapter that accepts content from an explicitly permitted public interface without bypassing access controls.
+- Added initial FastAPI application, health endpoint, supermarket/comparison endpoints, dependencies, and API smoke tests.
+- Added initial Next.js frontend package, root layout, and comparison landing page.
+- Updated TODO to identify the remaining real-data integration work.
 
 ## Current state
 
-The project has its architecture, configuration, data contract, collection policy, parsing/normalization foundation, database schema, and comparison calculations. The next task is to implement the **first real supermarket collector** against a permitted public source and test the complete source-to-price pipeline.
+The repository now contains collection, parsing, normalization, persistence, comparison, API, and frontend foundations. Real supermarket observations still need to be collected through verified permitted sources and wired through the database/API before the application can be considered live production software.
+
+## Verification
+
+Repository changes are considered finished only when successfully committed and recorded here.
