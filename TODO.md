@@ -5,10 +5,10 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 ## Phase 1 — Foundation
 
 - [x] Create project README
-- [ ] Create project status/completion log
-- [ ] Define repository structure
-- [ ] Define supported supermarket configuration format
-- [ ] Choose initial supermarkets and public source URLs
+- [x] Create project status/completion log
+- [x] Define repository structure
+- [x] Define supported supermarket configuration format
+- [x] Choose initial supermarkets and public source URLs
 - [ ] Define common product/price data model
 
 ## Phase 2 — Data collection
@@ -97,4 +97,4 @@ Active development roadmap for the Kosovo Supermarket Price Tracker.
 
 ## Current task
 
-**Step 2: Create the project completion/status log (`FINISHED.md`).**
+**Step 6: Define the common product and price data model.**
